@@ -22,6 +22,8 @@
 #include "rq_unsafe.h"
 #elif defined RQ_VCAS
 #include "rq_vcas.h"
+//#include "rq_vcas_rdtsc.h"
+//#include "rq_vcas_rdtscp.h"
 #elif defined RQ_SNAPCOLLECTOR
 #include "rq_snapcollector.h"
 #else

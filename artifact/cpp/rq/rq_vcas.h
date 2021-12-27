@@ -84,6 +84,8 @@ private:
     template<class T>
     inline void initTS(T node) {
         if(node->ts == TBD) {
+            /// TODO: figure out why reading is faster with rdtsc and rdtscp than normal impl
+            //printf("here and timestamp is TBD\n");
             // node->ts = 0;
             long long curTS = timestamp;
             CAS(&(node->ts), TBD, curTS);
